@@ -90,13 +90,16 @@ class RestaurantTableViewController: UITableViewController {
         
         
         //CHECK-IN -- another way to do CLOSURE (embedded)
-        let checkInAction = UIAlertAction(title: "Check in", style: .default, handler: {
+        let checkInButtonTitle = self.restaurantIsVisited[indexPath.row] ? "Undo Check in" : "Check in"
+        
+        let checkInAction = UIAlertAction(title: checkInButtonTitle, style: .default, handler: {
             (action:UIAlertAction!) -> Void in
             let cell = tableView.cellForRow(at: indexPath)
-            cell?.accessoryType = .checkmark
-            self.restaurantIsVisited[indexPath.row] = true
+            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .none : .checkmark
+            self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
         })
         optionMenu.addAction(checkInAction)
+    
         
         //DISPLAY IT
         present(optionMenu, animated: true, completion: nil)
