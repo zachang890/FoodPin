@@ -13,6 +13,7 @@ class RestaurantTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.cellLayoutMarginsFollowReadableWidth = true
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -60,52 +61,62 @@ class RestaurantTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        //DISPLAY ALERT
-        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet) //.alert instead of .actionSheet would pop up the center screen alert
-        
-        
-        //Basically you need to do this to accomodate IPAD because ipad has different type of popups
-        if let popoverController = optionMenu.popoverPresentationController {
-            if let cell = tableView.cellForRow(at: indexPath) {
-                popoverController.sourceView = cell
-                popoverController.sourceRect = cell.bounds
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showRestaurantDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destination as! RestaurantDetailViewController
+                destinationController.restaurantImageName = restaurantNames[indexPath.row]
             }
         }
-        //GIVE USERS A CHOICE OF WHAT TO DO
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil) //handler is nil because nothing is performed as a result of a cancel
-        optionMenu.addAction(cancelAction)
-        
-        //ALSO REFERRED TO AS "CLOSURE"
-        //CALLING ACTION, just like the previous handler, except we give it something to do this time instead of nil
-        let callActionHandler = { (action:UIAlertAction!) -> Void in //"in" denotes the end of parameters and return type
-            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .alert)
-            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alertMessage, animated: true, completion: nil)
-        }
-        
-        let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
-        optionMenu.addAction(callAction)
-        
-        
-        //CHECK-IN -- another way to do CLOSURE (embedded)
-        let checkInButtonTitle = self.restaurantIsVisited[indexPath.row] ? "Undo Check in" : "Check in"
-        
-        let checkInAction = UIAlertAction(title: checkInButtonTitle, style: .default, handler: {
-            (action:UIAlertAction!) -> Void in
-            let cell = tableView.cellForRow(at: indexPath)
-            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .none : .checkmark
-            self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
-        })
-        optionMenu.addAction(checkInAction)
-    
-        
-        //DISPLAY IT
-        present(optionMenu, animated: true, completion: nil)
-        //So the row doesn't stay gray
-        tableView.deselectRow(at: indexPath, animated: false)
     }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//
+//        //DISPLAY ALERT
+//        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet) //.alert instead of .actionSheet would pop up the center screen alert
+//
+//
+//        //Basically you need to do this to accomodate IPAD because ipad has different type of popups
+//        if let popoverController = optionMenu.popoverPresentationController {
+//            if let cell = tableView.cellForRow(at: indexPath) {
+//                popoverController.sourceView = cell
+//                popoverController.sourceRect = cell.bounds
+//            }
+//        }
+//        //GIVE USERS A CHOICE OF WHAT TO DO
+//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil) //handler is nil because nothing is performed as a result of a cancel
+//        optionMenu.addAction(cancelAction)
+//
+//        //ALSO REFERRED TO AS "CLOSURE"
+//        //CALLING ACTION, just like the previous handler, except we give it something to do this time instead of nil
+//        let callActionHandler = { (action:UIAlertAction!) -> Void in //"in" denotes the end of parameters and return type
+//            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .alert)
+//            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//            self.present(alertMessage, animated: true, completion: nil)
+//        }
+//
+//        let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
+//        optionMenu.addAction(callAction)
+//
+//
+//        //CHECK-IN -- another way to do CLOSURE (embedded)
+//        let checkInButtonTitle = self.restaurantIsVisited[indexPath.row] ? "Undo Check in" : "Check in"
+//
+//        let checkInAction = UIAlertAction(title: checkInButtonTitle, style: .default, handler: {
+//            (action:UIAlertAction!) -> Void in
+//            let cell = tableView.cellForRow(at: indexPath)
+//            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .none : .checkmark
+//            self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
+//        })
+//        optionMenu.addAction(checkInAction)
+//
+//
+//        //DISPLAY IT
+//        present(optionMenu, animated: true, completion: nil)
+//        //So the row doesn't stay gray
+//        tableView.deselectRow(at: indexPath, animated: false)
+//    }
+    
+    
     
 
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
