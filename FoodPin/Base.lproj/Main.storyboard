@@ -102,19 +102,47 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WLa-Y1-qii">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ywp-sr-lHW">
+                                <rect key="frame" x="174.5" y="402.5" width="65.5" height="91.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EE9-pT-zw2">
+                                        <rect key="frame" x="0.0" y="0.0" width="65.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1R-zc-hEt">
+                                        <rect key="frame" x="0.0" y="35.5" width="65.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8T-8J-lyH">
+                                        <rect key="frame" x="0.0" y="71" width="65.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="WLa-Y1-qii" firstAttribute="top" secondItem="6qb-AY-3f0" secondAttribute="top" id="3Dh-jm-eI2"/>
                             <constraint firstAttribute="bottom" secondItem="WLa-Y1-qii" secondAttribute="bottom" id="BJ4-GE-HAl"/>
+                            <constraint firstItem="Ywp-sr-lHW" firstAttribute="centerX" secondItem="6qb-AY-3f0" secondAttribute="centerX" id="UO4-Bc-QLD"/>
                             <constraint firstItem="WLa-Y1-qii" firstAttribute="trailing" secondItem="FWf-Uq-BCg" secondAttribute="trailing" id="gQm-bw-ltG"/>
+                            <constraint firstItem="Ywp-sr-lHW" firstAttribute="centerY" secondItem="6qb-AY-3f0" secondAttribute="centerY" id="loz-c9-1TV"/>
                             <constraint firstItem="WLa-Y1-qii" firstAttribute="leading" secondItem="FWf-Uq-BCg" secondAttribute="leading" id="rrO-0z-3Fy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FWf-Uq-BCg"/>
                     </view>
                     <navigationItem key="navigationItem" id="F4P-A9-Gej"/>
                     <connections>
+                        <outlet property="locationLabelView" destination="h8T-8J-lyH" id="WY3-bX-dqc"/>
+                        <outlet property="nameLabelView" destination="EE9-pT-zw2" id="E5z-h2-p21"/>
                         <outlet property="restaurantImageView" destination="WLa-Y1-qii" id="APH-bm-M72"/>
+                        <outlet property="typeLabelView" destination="R1R-zc-hEt" id="vbd-xB-4Gi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9l8-eH-kNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
