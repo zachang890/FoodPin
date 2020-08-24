@@ -85,7 +85,9 @@
                             <outlet property="delegate" destination="oQE-t8-jZk" id="clf-yy-dES"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FoodPin" id="D82-cV-Lkf"/>
+                    <navigationItem key="navigationItem" title="FoodPin" id="D82-cV-Lkf">
+                        <barButtonItem key="backBarButtonItem" title=" " id="HAq-Jg-twf"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7g-nr-rsB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,7 +175,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GGX-uu-cac">
-                                                    <rect key="frame" x="23" y="11" width="368" height="20.5"/>
+                                                    <rect key="frame" x="23" y="11" width="331" height="20.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2oP-5P-z3o">
                                                             <rect key="frame" x="0.0" y="0.5" width="20" height="20"/>
@@ -183,7 +185,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZb-DS-zmL">
-                                                            <rect key="frame" x="30" y="2" width="338" height="17"/>
+                                                            <rect key="frame" x="30" y="2" width="301" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -195,7 +197,7 @@
                                                 <constraint firstItem="GGX-uu-cac" firstAttribute="top" secondItem="lML-9w-2HE" secondAttribute="topMargin" id="Tr8-9R-gJC"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="GGX-uu-cac" secondAttribute="bottom" constant="2" id="Uhe-6D-SdH"/>
                                                 <constraint firstItem="GGX-uu-cac" firstAttribute="leading" secondItem="lML-9w-2HE" secondAttribute="leadingMargin" constant="3" id="XIp-9P-xmu"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="GGX-uu-cac" secondAttribute="trailing" constant="3" id="tF1-br-HHp"/>
+                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="GGX-uu-cac" secondAttribute="trailing" constant="40" id="tF1-br-HHp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

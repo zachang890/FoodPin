@@ -9,6 +9,13 @@
 import UIKit
 
 class RestaurantDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+//    override func viewDidAppear(_ animated: Bool) {
+//        navigationController?.navigationBar.barStyle = .black
+//    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -41,7 +48,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     
     var restaurant = Restaurant()
     
-    override func viewDidLoad() {
+    override func viewDidLoad() { //CALLED ONLY ONCE
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         
@@ -53,7 +60,22 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         tableView.dataSource = self
         
         tableView.separatorStyle = .none //no lines in between
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
+        tableView.contentInsetAdjustmentBehavior = .never //shifts image view back up
+        
+        navigationController?.hidesBarsOnSwipe = true
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) { //CALLED EVERY TIME VIEW APPEARS
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.barStyle = .black
     }
     
     @IBOutlet var tableView: UITableView!
