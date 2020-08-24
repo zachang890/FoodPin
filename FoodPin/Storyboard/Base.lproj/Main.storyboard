@@ -41,19 +41,19 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="uBi-zG-Att">
                                                     <rect key="frame" x="75" y="0.0" width="293" height="58.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKT-h1-Wgk">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKT-h1-Wgk">
                                                             <rect key="frame" x="0.0" y="0.0" width="293" height="20.5"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmo-8Z-3QB">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmo-8Z-3QB">
                                                             <rect key="frame" x="0.0" y="21.5" width="293" height="18"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0C-uS-NGu">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0C-uS-NGu">
                                                             <rect key="frame" x="0.0" y="40.5" width="293" height="18"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -197,7 +197,7 @@
                                                 <constraint firstItem="GGX-uu-cac" firstAttribute="top" secondItem="lML-9w-2HE" secondAttribute="topMargin" id="Tr8-9R-gJC"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="GGX-uu-cac" secondAttribute="bottom" constant="2" id="Uhe-6D-SdH"/>
                                                 <constraint firstItem="GGX-uu-cac" firstAttribute="leading" secondItem="lML-9w-2HE" secondAttribute="leadingMargin" constant="3" id="XIp-9P-xmu"/>
-                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="GGX-uu-cac" secondAttribute="trailing" constant="40" id="tF1-br-HHp"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GGX-uu-cac" secondAttribute="trailing" constant="40" id="tF1-br-HHp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -212,18 +212,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3F-dt-VKn">
-                                                    <rect key="frame" x="23" y="11" width="37" height="18.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3F-dt-VKn">
+                                                    <rect key="frame" x="23" y="11" width="368" height="18.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="m3F-dt-VKn" secondAttribute="bottom" constant="4" id="78d-6w-03B"/>
-                                                <constraint firstItem="m3F-dt-VKn" firstAttribute="top" secondItem="zZ1-ZB-P30" secondAttribute="topMargin" id="AbL-wC-HqJ"/>
-                                                <constraint firstItem="m3F-dt-VKn" firstAttribute="leading" secondItem="zZ1-ZB-P30" secondAttribute="leadingMargin" constant="3" id="LNL-OC-O6z"/>
-                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="m3F-dt-VKn" secondAttribute="trailing" constant="40" id="Wnh-6v-nTZ"/>
+                                                <constraint firstItem="m3F-dt-VKn" firstAttribute="leading" secondItem="zZ1-ZB-P30" secondAttribute="leadingMargin" constant="3" id="9ZH-7v-7n8"/>
+                                                <constraint firstItem="m3F-dt-VKn" firstAttribute="top" secondItem="zZ1-ZB-P30" secondAttribute="topMargin" id="E3R-Zl-W1M"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="m3F-dt-VKn" secondAttribute="trailing" constant="3" id="kvc-7t-2qV"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="m3F-dt-VKn" secondAttribute="bottom" constant="4" id="mHd-Hk-QfE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
