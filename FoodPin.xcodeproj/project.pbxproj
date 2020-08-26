@@ -34,6 +34,7 @@
 		96C3370F24F369E600F31B81 /* RestaurantDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3370E24F369E600F31B81 /* RestaurantDetailTextCell.swift */; };
 		96C3371224F4710D00F31B81 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3371124F4710D00F31B81 /* UIColor+Ext.swift */; };
 		96C3371424F4723800F31B81 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3371324F4723800F31B81 /* UINavigationController+Ext.swift */; };
+		96C9806224F6305A0088D7E7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C9806124F6305A0088D7E7 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		96C3370E24F369E600F31B81 /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTextCell.swift; sourceTree = "<group>"; };
 		96C3371124F4710D00F31B81 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		96C3371324F4723800F31B81 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
+		96C9806124F6305A0088D7E7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C9806224F6305A0088D7E7 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +152,7 @@
 			children = (
 				9670B43D24EC2C2200AE6293 /* FoodPin */,
 				9670B43C24EC2C2200AE6293 /* Products */,
+				96C9806024F6305A0088D7E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +188,14 @@
 				96C3371324F4723800F31B81 /* UINavigationController+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		96C9806024F6305A0088D7E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96C9806124F6305A0088D7E7 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
