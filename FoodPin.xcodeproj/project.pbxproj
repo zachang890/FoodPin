@@ -23,6 +23,8 @@
 		961D9D5524F33B58002964BF /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 961D9D3724F33091002964BF /* Rubik-SemiBold.ttf */; };
 		961D9D5624F33B58002964BF /* Rubik-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 961D9D3124F33091002964BF /* Rubik-SemiBoldItalic.ttf */; };
 		961D9D5924F33E72002964BF /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961D9D5824F33E72002964BF /* RestaurantDetailHeaderView.swift */; };
+		9631969424F743B900B8BA00 /* RestaurantDetailSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9631969324F743B900B8BA00 /* RestaurantDetailSeparatorCell.swift */; };
+		9631969624F7448E00B8BA00 /* RestaurantDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9631969524F7448E00B8BA00 /* RestaurantDetailMapCell.swift */; };
 		9670B43F24EC2C2200AE6293 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670B43E24EC2C2200AE6293 /* AppDelegate.swift */; };
 		9670B44124EC2C2200AE6293 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9670B44024EC2C2200AE6293 /* SceneDelegate.swift */; };
 		9670B44624EC2C2200AE6293 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9670B44424EC2C2200AE6293 /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 		961D9D3A24F33092002964BF /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		961D9D3B24F33092002964BF /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
 		961D9D5824F33E72002964BF /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
+		9631969324F743B900B8BA00 /* RestaurantDetailSeparatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailSeparatorCell.swift; sourceTree = "<group>"; };
+		9631969524F7448E00B8BA00 /* RestaurantDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailMapCell.swift; sourceTree = "<group>"; };
 		9670B43B24EC2C2200AE6293 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9670B43E24EC2C2200AE6293 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9670B44024EC2C2200AE6293 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 				961D9D5824F33E72002964BF /* RestaurantDetailHeaderView.swift */,
 				96C3370C24F368D100F31B81 /* RestaurantDetailIconTextCell.swift */,
 				96C3370E24F369E600F31B81 /* RestaurantDetailTextCell.swift */,
+				9631969324F743B900B8BA00 /* RestaurantDetailSeparatorCell.swift */,
+				9631969524F7448E00B8BA00 /* RestaurantDetailMapCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,6 +295,8 @@
 				961D9D2724F056A2002964BF /* Restaurant.swift in Sources */,
 				961D9D5924F33E72002964BF /* RestaurantDetailHeaderView.swift in Sources */,
 				961D9D2524F046EC002964BF /* RestaurantDetailViewController.swift in Sources */,
+				9631969424F743B900B8BA00 /* RestaurantDetailSeparatorCell.swift in Sources */,
+				9631969624F7448E00B8BA00 /* RestaurantDetailMapCell.swift in Sources */,
 				9670B44124EC2C2200AE6293 /* SceneDelegate.swift in Sources */,
 				96C3371224F4710D00F31B81 /* UIColor+Ext.swift in Sources */,
 				9670B45324EC2CE100AE6293 /* RestaurantTableViewController.swift in Sources */,

@@ -98,7 +98,7 @@
             <objects>
                 <viewController id="AGM-Ty-qWg" customClass="RestaurantDetailViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6qb-AY-3f0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Urr-9j-zcs">
@@ -230,21 +230,68 @@
                                             <outlet property="descriptionLabel" destination="m3F-dt-VKn" id="Mk8-YL-8G9"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantDetailTextCell" id="bQN-JF-XH5" customClass="RestaurantDetailTextCell" customModule="FoodPin" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="467" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantDetailSeparatorCell" id="bQN-JF-XH5" customClass="RestaurantDetailSeparatorCell" customModule="FoodPin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="467" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bQN-JF-XH5" id="Qxa-Kh-IIt">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2R2-US-rES">
+                                                    <rect key="frame" x="18" y="5.5" width="378" height="26.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subsection title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hv-bZ-hsN">
+                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="20.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AkS-Zb-nHU" userLabel="Separator">
+                                                            <rect key="frame" x="0.0" y="25.5" width="378" height="1"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="1pe-Fw-zhq"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="2R2-US-rES" secondAttribute="bottom" constant="12" id="Ahf-OL-7YK"/>
+                                                <constraint firstItem="2R2-US-rES" firstAttribute="leading" secondItem="Qxa-Kh-IIt" secondAttribute="leading" constant="18" id="PBn-Um-83Q"/>
+                                                <constraint firstItem="2R2-US-rES" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Qxa-Kh-IIt" secondAttribute="top" constant="5" id="aWh-m4-LLD"/>
+                                                <constraint firstAttribute="trailing" secondItem="2R2-US-rES" secondAttribute="trailing" constant="18" id="dO7-Wg-l2V"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="6hv-bZ-hsN" id="hxd-0s-O0O"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantDetailTextCell" id="6zf-s7-dJ6" customClass="RestaurantDetailTextCell" customModule="FoodPin" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="510.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantDetailMapCell" rowHeight="215" id="6zf-s7-dJ6" customClass="RestaurantDetailMapCell" customModule="FoodPin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="511" width="414" height="215"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6zf-s7-dJ6" id="gY5-OM-abd">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="215"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laB-Xs-rkF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="215"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="215" id="Tw5-ig-8uN"/>
+                                                    </constraints>
+                                                </mapView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="laB-Xs-rkF" secondAttribute="trailing" id="AvE-Yj-edo"/>
+                                                <constraint firstItem="laB-Xs-rkF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gY5-OM-abd" secondAttribute="top" id="Lh1-c6-UCW"/>
+                                                <constraint firstAttribute="bottom" secondItem="laB-Xs-rkF" secondAttribute="bottom" id="WHR-cz-UHe"/>
+                                                <constraint firstItem="laB-Xs-rkF" firstAttribute="leading" secondItem="gY5-OM-abd" secondAttribute="leading" id="uzn-XH-ciq"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mapView" destination="laB-Xs-rkF" id="hyv-sN-Nyq"/>
+                                            <segue destination="uaM-nm-YTH" kind="show" identifier="showMap" id="paa-VM-uAI"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -253,6 +300,7 @@
                         <viewLayoutGuide key="safeArea" id="FWf-Uq-BCg"/>
                     </view>
                     <navigationItem key="navigationItem" id="F4P-A9-Gej"/>
+                    <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="headerView" destination="zGe-oN-z35" id="eHe-d0-HcP"/>
                         <outlet property="tableView" destination="Urr-9j-zcs" id="yoG-8D-Nvj"/>
@@ -261,6 +309,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9l8-eH-kNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1746.376811594203" y="120.53571428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="01W-Rb-YAz">
+            <objects>
+                <viewController id="uaM-nm-YTH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mJ2-4H-30N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dMp-za-ehY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dMp-za-ehY" secondAttribute="bottom" id="SM7-7p-ZJ7"/>
+                            <constraint firstItem="dMp-za-ehY" firstAttribute="top" secondItem="mJ2-4H-30N" secondAttribute="top" id="T07-eE-s0U"/>
+                            <constraint firstItem="dMp-za-ehY" firstAttribute="trailing" secondItem="t9M-on-IED" secondAttribute="trailing" id="q9j-i7-1dJ"/>
+                            <constraint firstItem="dMp-za-ehY" firstAttribute="leading" secondItem="t9M-on-IED" secondAttribute="leading" id="zVC-iT-KOn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="t9M-on-IED"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WHR-JE-tht"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZl-IP-nMb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2584.057971014493" y="120.53571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZXm-43-Z7l">
